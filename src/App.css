@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Set to 100% of the viewport height */
+  margin: 0;
+}
+
+.App {
+  text-align: center;
+}
+
+.receipt {
+  width: 300px; /* Set a fixed width or use a percentage */
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 12px;
+}
+
+.receipt h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+.receipt p {
+  margin: 5px 0;
+}
+
+.receipt hr {
+  border: none;
+  border-top: 1px dashed #000;
+  margin: 10px 0;
+}
+
+.receipt .items {
+  text-align: left;
+}
+
+.receipt .items p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.print-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@media print {
+  .print-button {
+    display: none;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  .receipt {
+    box-shadow: none;
+    width: 100%; 
+  }
+}
